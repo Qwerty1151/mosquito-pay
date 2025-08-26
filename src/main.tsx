@@ -1,3 +1,5 @@
+// src/main.tsx
+import './index.css';               // <-- ВАЖНО: подключаем Tailwind-стили
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
