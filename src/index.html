@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Navilon Dev - International IT Company | Software Development & AI Solutions</title>
+    <meta name="title" content="Navilon Dev - International IT Company | Software Development & AI Solutions">
+    <meta name="description" content="Navilon Dev - Международная IT-компания, специализирующаяся на разработке ПО, игр, AI-решений и IT-консалтинге. Профессиональные решения для вашего бизнеса.">
+    <meta name="keywords" content="IT company, software development, game development, AI solutions, IT consulting, web development, mobile apps, artificial intelligence">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Navilon Dev">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://navilon-dev.com/">
+    <meta property="og:title" content="Navilon Dev - International IT Company">
+    <meta property="og:description" content="Professional software development, game development, AI solutions and IT consulting services worldwide.">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:site_name" content="Navilon Dev">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://navilon-dev.com/">
+    <meta property="twitter:title" content="Navilon Dev - International IT Company">
+    <meta property="twitter:description" content="Professional software development, game development, AI solutions and IT consulting services worldwide.">
+    <meta property="twitter:image" content="/twitter-image.png">
+    <meta property="twitter:creator" content="@navilon_dev">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0a0f1c">
+    <meta name="msapplication-TileColor" content="#0a0f1c">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- Critical CSS inline for fastest loading -->
+    <style>
+      /* Critical above-the-fold styles */
+      html { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      body { margin: 0; background-color: #0a0f1c; color: #ffffff; }
+      #root { min-height: 100vh; }
+      
+      /* Loading spinner */
+      .loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(0, 212, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #00d4ff;
+        animation: spin 1s ease-in-out infinite;
+        z-index: 9999;
+      }
+      
+      @keyframes spin {
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      
+      /* Hide loading spinner when app loads */
+      .app-loaded .loading-spinner { display: none; }
+    </style>
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Navilon Dev",
+      "description": "International IT company specializing in software development, game development, AI solutions and IT consulting",
+      "url": "https://navilon-dev.com",
+      "logo": "https://navilon-dev.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Russian", "German", "French", "Spanish", "Polish", "Chinese"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/navilon-dev",
+        "https://github.com/navilon-dev",
+        "https://twitter.com/navilon_dev"
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "50-100"
+      },
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software Development",
+              "description": "Custom software development solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Game Development",
+              "description": "Professional game development services"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Solutions",
+              "description": "Artificial intelligence and machine learning solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Consulting",
+              "description": "Professional IT consulting and advisory services"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="/main.tsx" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading spinner shown until React app loads -->
+      <div class="loading-spinner"></div>
+    </div>
+    <script type="module" src="/main.tsx"></script>
+    
+    <!-- Performance and analytics (optional) -->
+    <script>
+      // Simple performance monitoring
+      window.addEventListener('load', function() {
+        document.body.classList.add('app-loaded');
+        
+        // Report loading time
+        const perfData = performance.getEntriesByType("navigation")[0];
+        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+      });
+    </script>
+  </body>
+</html>
