@@ -1,30 +1,31 @@
-# mosquito-pay-v1-fix
+# Mosquito Pay — Vercel/Vite/Tailwind Fix Kit
 
-Назначение: быстро привести Vite-лендинг в корректное состояние для деплоя на Vercel.
-Скрипт **apply_fix.ps1**:
-- удалит вложенный шаблон из `src/` (если он остался);
-- перенесёт `src/public` в корень `public/`;
-- положит исправленные конфиги (`vite.config.ts`, `postcss.config.js`, `tailwind.config.ts`, `vercel.json`);
-- добавит/обновит скрипты в `package.json` и нужные devDependencies (tailwind/postcss/autoprefixer/@vitejs/plugin-react-swc/vite);
-- вставит импорт `./index.css` в `src/main.tsx`, если его нет;
-- создаст `src/index.css` с директивами Tailwind, если файла не было.
+Что делает этот набор:
+- Приводит проект к корректной для Vercel структуре (корневой `index.html`, сборка в `dist/`).
+- Добавляет/исправляет конфиги Vite, Tailwind и PostCSS (CJS), SPA‑роутинг `vercel.json`.
+- Обновляет `package.json` (vite, @vitejs/plugin-react-swc, tailwindcss, postcss, autoprefixer).
+- Безопасно добавляет в `src/styles/globals.css` строки `@tailwind base; @tailwind components; @tailwind utilities;` (если их нет) — визуальный дизайн не меняется.
 
-## Как запускать (Windows)
+## Быстрый запуск (Windows)
 
-1. Распакуйте архив в корень проекта (где лежит ваш `package.json`).
-2. Запустите PowerShell от имени пользователя и выполните:
-   ```
-   Set-ExecutionPolicy -Scope Process Bypass
-   .\apply_fix.ps1
-   ```
-   или двойным кликом `apply_fix.cmd`.
+1. Откройте *Git Bash* или *PowerShell* в корне репо (там, где лежит `.git/`).
+2. Запустите:
+   - `apply_fix.cmd` (для Windows) **или**
+   - `powershell -ExecutionPolicy Bypass -File .\apply_fix.ps1`
 
-3. Установите зависимости (локально, чтобы обновился lockfile) и закоммитьте:
-   ```
-   npm i
-   git add -A
-   git commit -m "chore: apply mosquito-pay-v1-fix"
-   git push
-   ```
+Скрипт:
+- Переместит `src/public` → `public` (если есть).
+- Переместит `src/index.html` → `index.html` (если есть).
+- Скопирует/перезапишет конфиги из папки `files/`.
+- Поправит/создаст `src/styles/globals.css` с таилвинд директивами.
+- Допишет зависимости в `package.json` и скрипты сборки.
+- Создаст коммит с сообщением `build: apply Vite/Tailwind/Vercel fix`.
 
-Vercel автоматически пересоберёт проект. 
+Затем выполните:
+```
+git push
+```
+И на Vercel нажмите **Redeploy**.
+
+## Если нужен откат
+Сделайте `git revert` соответствующего коммита или удалите созданные файлы вручную.
