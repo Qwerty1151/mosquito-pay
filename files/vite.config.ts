@@ -8,7 +8,11 @@ export default defineConfig({
     alias: { "@": path.resolve(process.cwd(), "src") },
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
   },
-  build: { target: "esnext", outDir: "dist", emptyOutDir: true },
+  build: {
+    target: "esnext",
+    outDir: "dist",
+    emptyOutDir: true,
+  },
   server: { port: 3000, open: true },
   preview: { port: 4173 },
 });

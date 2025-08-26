@@ -1,4 +1,4 @@
-/** @type {import('postcss-load-config').Config} */
+/** PostCSS config (CJS) for Vercel */
 module.exports = {
   plugins: {
     tailwindcss: {},
