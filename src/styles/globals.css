@@ -2,56 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === NAVILON TOKENS (RGB) === */
-:root{
-  --font-size:14px;
-
-  /* базовые rgb (пробелы, без запятых) */
-  --background-rgb: 10 15 28;      /* #0a0f1c */
-  --foreground-rgb: 255 255 255;
-  --card-rgb:        15 23 41;      /* #0f1729 */
-  --card-foreground-rgb: 255 255 255;
-  --primary-rgb:      0 212 255;    /* #00d4ff */
-  --primary-foreground-rgb: 10 15 28;
-  --secondary-rgb:   26 35 50;      /* #1a2332 */
-  --secondary-foreground-rgb: 255 255 255;
-  --muted-rgb:       26 35 50;
-  --muted-foreground-rgb: 148 163 184; /* #94a3b8 */
-  --border-rgb:     255 255 255;    /* /10 будем ставить в классах */
-  --input-rgb:      255 255 255;
-  --ring-rgb:         0 212 255;
-
-  /* хелперы в формате rgb(var()) — удобно вне Tailwind-классов */
-  --background: rgb(var(--background-rgb));
-  --foreground: rgb(var(--foreground-rgb));
-  --card: rgb(var(--card-rgb));
-  --primary: rgb(var(--primary-rgb));
-  --secondary: rgb(var(--secondary-rgb));
-  --muted: rgb(var(--muted-rgb));
-  --border: rgba(255,255,255,.10);
-  --input: rgba(255,255,255,.10);
-
-  --radius: .625rem;
+/* Жёсткие цвета, чтобы контент был виден даже если токены не подхватятся */
+:root {
+  --background: #0b1220;   /* темный фон */
+  --foreground: #e6f0ff;   /* светлый текст */
+  --border: rgba(255,255,255,.12);
 }
-
-html{ font-size:var(--font-size); }
-body{ @apply bg-background text-foreground antialiased; }
-::selection{ background: var(--primary); color: var(--primary-foreground); }
-:focus-visible{ outline:none; box-shadow:0 0 0 3px rgb(var(--ring-rgb)); border-radius:8px; }
-
-@layer utilities{
-  .btn{ @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
-  .btn-primary{ @apply btn bg-primary text-[rgb(var(--primary-foreground-rgb))] hover:opacity-90 shadow-soft; }
-  /* <alpha> теперь работает: */
-  .btn-ghost{ @apply btn bg-transparent border border-border/30 hover:bg-secondary/30; }
-  .btn-outline{ @apply btn bg-transparent border border-border/60 text-foreground hover:bg-secondary/20; }
-  .card{ @apply rounded-2xl border border-border/10 bg-card shadow-card; }
-  .badge{ @apply inline-flex items-center gap-2 rounded-full border border-border/20 px-3 py-1 text-sm; }
-  .input{ @apply w-full rounded-xl border border-border/20 bg-transparent px-3 py-2 outline-none focus:border-primary placeholder:text-[rgb(var(--muted-foreground-rgb))]; }
-  .label{ @apply mb-1 block text-sm text-[rgb(var(--muted-foreground-rgb))]; }
+html, body {
+  background: var(--background);
+  color: var(--foreground);
 }
-
-h1{ @apply text-4xl md:text-5xl font-extrabold tracking-tight; }
-h2{ @apply text-3xl font-bold; }
-h3{ @apply text-2xl font-semibold; }
-p{ @apply text-slate-300; }
+.container { @apply mx-auto max-w-6xl px-4; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-primary { @apply btn bg-[rgb(0,170,252)] text-black hover:opacity-90 shadow; }
+.btn-ghost   { @apply btn bg-transparent border border-[var(--border)] hover:bg-white/10; }
+.card        { @apply rounded-2xl border border-[var(--border)] bg-white/5 shadow; }
