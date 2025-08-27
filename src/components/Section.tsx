@@ -1,4 +1,4 @@
-import { cn } from "@/src/components/utils"; // если нет, ниже дам fallback
+import { cn } from "@/components/utils"; // если нет, ниже дам fallback
 
 type Props = {
   id?: string;

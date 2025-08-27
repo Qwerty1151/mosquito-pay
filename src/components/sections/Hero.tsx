@@ -1,6 +1,6 @@
 "use client";
 import Section from "../Section";
-import { WEBSTORE_URL } from "@/src/lib/const";
+import { WEBSTORE_URL } from "@/lib/const";
 import Link from "next/link";
 
 type T = (k: string) => string;

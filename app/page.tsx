@@ -1,10 +1,10 @@
-import Hero from "@/src/components/sections/Hero";
-import Pain from "@/src/components/sections/Pain";
-import HowItWorks from "@/src/components/sections/HowItWorks";
-import Features from "@/src/components/sections/Features";
-import CTA from "@/src/components/sections/CTA";
-import Compare from "@/src/components/sections/Compare";
-import Testimonials from "@/src/components/sections/Testimonials";
+import Hero from "@/components/sections/Hero";
+import Pain from "@/components/sections/Pain";
+import HowItWorks from "@/components/sections/HowItWorks";
+import Features from "@/components/sections/Features";
+import CTA from "@/components/sections/CTA";
+import Compare from "@/components/sections/Compare";
+import Testimonials from "@/components/sections/Testimonials";
 import { cookies, headers } from "next/headers";
 import en from "@/messages/en.json";
 import ru from "@/messages/ru.json";
