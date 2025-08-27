@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "pricing": "Tarif",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "dashboard": "Tableau de bord"
+  },
+  "hero": {
+    "title": "Répulsif ultrason anti-moustiques",
+    "subtitle": "Premium débloque des modes plus puissants, la protection en arrière-plan et des horaires intelligents.",
+    "ctaDownload": "Télécharger l’extension",
+    "ctaBuy": "Acheter Premium"
+  },
+  "features": {
+    "title": "Pourquoi Premium",
+    "items": [
+      {
+        "title": "Gamme de fréquences élargie",
+        "desc": "Plus de préréglages pour différents insectes."
+      },
+      {
+        "title": "Protection en arrière-plan",
+        "desc": "Fonctionne même quand la fenêtre est fermée."
+      },
+      {
+        "title": "Horaires",
+        "desc": "Silencieux la nuit, actif au crépuscule."
+      },
+      {
+        "title": "Licence pour vos profils Chrome",
+        "desc": "Utilisez votre clé sur vos appareils (fair-use)."
+      },
+      {
+        "title": "Sans pistage ni publicités",
+        "desc": "Nous stockons uniquement l’e-mail et la licence. Paiement via Payeer."
+      },
+      {
+        "title": "Activation en un clic",
+        "desc": "Collez la clé — l’appli la vérifie via une API sécurisée."
+      }
+    ]
+  },
+  "how": {
+    "title": "Comment ça marche",
+    "steps": [
+      "Installez l’extension gratuite",
+      "Choisissez une fréquence",
+      "Passez à Premium",
+      "Activez avec la clé reçue par e-mail"
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Les ultrasons repoussent-ils vraiment ?",
+    "a1": "L’efficacité varie selon l’espèce et l’environnement. Premium ajoute des préréglages à tester.",
+    "q2": "Que reçois-je après paiement ?",
+    "a2": "Une clé de licence par e-mail. Collez-la dans l’extension.",
+    "q3": "Où sont stockées mes données ?",
+    "a3": "E-mail et licence dans Vercel KV. Aucune donnée de carte.",
+    "q4": "Remboursements ?",
+    "a4": "Les licences numériques ne sont généralement pas remboursées."
+  },
+  "pricing": {
+    "title": "Offre Premium",
+    "email": "Adresse e-mail",
+    "agree": "J’accepte les Conditions et la Confidentialité",
+    "pay": "Payer avec Payeer",
+    "errors": {
+      "email": "Saisissez un e-mail valide",
+      "agree": "Vous devez accepter"
+    }
+  },
+  "success": {
+    "title": "Paiement réussi",
+    "desc": "Votre clé a été envoyée par e-mail.",
+    "home": "Accueil",
+    "dashboard": "Tableau de bord"
+  },
+  "fail": {
+    "title": "Paiement échoué",
+    "desc": "Vérifiez votre carte/solde et réessayez.",
+    "retry": "Réessayer",
+    "home": "Accueil"
+  },
+  "dashboard": {
+    "title": "Tableau de licence",
+    "token": "Clé de licence",
+    "check": "Vérifier",
+    "ok": "Licence valide",
+    "invalid": "Clé invalide",
+    "expired": "Licence expirée",
+    "history": "Historique des achats (bientôt)"
+  },
+  "legal": {
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions & remboursements"
+  }
+}

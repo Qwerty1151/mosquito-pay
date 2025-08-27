@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "pricing": "Cennik",
+    "privacy": "Prywatność",
+    "terms": "Warunki",
+    "dashboard": "Panel"
+  },
+  "hero": {
+    "title": "Ultradźwiękowy odstraszacz komarów",
+    "subtitle": "Premium odblokowuje tryby o większej mocy, pracę w tle i harmonogramy.",
+    "ctaDownload": "Pobierz rozszerzenie",
+    "ctaBuy": "Kup Premium"
+  },
+  "features": {
+    "title": "Dlaczego Premium",
+    "items": [
+      {
+        "title": "Szerszy zakres częstotliwości",
+        "desc": "Więcej presetów dla różnych gatunków."
+      },
+      {
+        "title": "Ochrona w tle",
+        "desc": "Działa nawet po zamknięciu popupu."
+      },
+      {
+        "title": "Harmonogramy",
+        "desc": "Cicho nocą, aktywnie o zmierzchu."
+      },
+      {
+        "title": "Licencja na profile Chrome",
+        "desc": "Używaj klucza na swoich urządzeniach w ramach fair-use."
+      },
+      {
+        "title": "Bez śledzenia i reklam",
+        "desc": "Przechowujemy tylko e-mail i licencję. Płatność przez Payeer."
+      },
+      {
+        "title": "Aktywacja jednym kliknięciem",
+        "desc": "Wklej klucz — aplikacja zweryfikuje go przez API."
+      }
+    ]
+  },
+  "how": {
+    "title": "Jak to działa",
+    "steps": [
+      "Zainstaluj darmowe rozszerzenie",
+      "Wybierz częstotliwość",
+      "Kup Premium",
+      "Aktywuj kluczem z e-maila"
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Czy ultradźwięki naprawdę odstraszają?",
+    "a1": "Efekt zależy od gatunku i środowiska. Premium daje więcej presetów do testów.",
+    "q2": "Co dostanę po płatności?",
+    "a2": "Klucz licencyjny na e-mail. Wklej go w rozszerzeniu.",
+    "q3": "Gdzie są moje dane?",
+    "a3": "E-mail i licencja w Vercel KV. Bez danych karty.",
+    "q4": "Zwroty?",
+    "a4": "Licencje cyfrowe zwykle nie podlegają zwrotom."
+  },
+  "pricing": {
+    "title": "Plan Premium",
+    "email": "Adres e-mail",
+    "agree": "Akceptuję Warunki i Prywatność",
+    "pay": "Zapłać przez Payeer",
+    "errors": {
+      "email": "Podaj poprawny e-mail",
+      "agree": "Musisz zaakceptować"
+    }
+  },
+  "success": {
+    "title": "Płatność zakończona",
+    "desc": "Klucz licencyjny wysłano na e-mail.",
+    "home": "Strona główna",
+    "dashboard": "Panel"
+  },
+  "fail": {
+    "title": "Błąd płatności",
+    "desc": "Sprawdź kartę/saldo i spróbuj ponownie.",
+    "retry": "Spróbuj ponownie",
+    "home": "Strona główna"
+  },
+  "dashboard": {
+    "title": "Panel licencji",
+    "token": "Klucz licencyjny",
+    "check": "Sprawdź",
+    "ok": "Licencja ważna",
+    "invalid": "Nieprawidłowy klucz",
+    "expired": "Licencja wygasła",
+    "history": "Historia zakupów (wkrótce)"
+  },
+  "legal": {
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki i zwroty"
+  }
+}

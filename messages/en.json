@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "pricing": "Pricing",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Ultrasonic Mosquito Repellent",
+    "subtitle": "Premium blocks bugs, not your browser. Unlock higher power modes, continuous background protection and smart schedules.",
+    "ctaDownload": "Download Extension",
+    "ctaBuy": "Buy Premium"
+  },
+  "features": {
+    "title": "Why Premium",
+    "items": [
+      {
+        "title": "Stronger ultrasonic range",
+        "desc": "Extended frequency presets engineered to repel more species."
+      },
+      {
+        "title": "Background protection",
+        "desc": "Runs even when popup is closed using safe alarm timers."
+      },
+      {
+        "title": "Schedule & Auto-start",
+        "desc": "Quiet at night, active at dusk — set and forget."
+      },
+      {
+        "title": "License on all your Chrome profiles",
+        "desc": "Use your key across devices under fair-use policy."
+      },
+      {
+        "title": "No tracking, no ads",
+        "desc": "We store email and license only. Payments via Payeer."
+      },
+      {
+        "title": "One-click activation",
+        "desc": "Paste the key — the app verifies it via secure API."
+      }
+    ]
+  },
+  "how": {
+    "title": "How it works",
+    "steps": [
+      "Install the free extension",
+      "Choose a frequency and test",
+      "Go Premium for background & schedules",
+      "Activate with the email license key"
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Does ultrasonic sound really repel mosquitoes?",
+    "a1": "Effect may vary across species and environments. We provide safe audio emissions; Premium adds more presets so you can test what works best.",
+    "q2": "What do I get after paying?",
+    "a2": "A license key is generated and delivered to your email. Paste it in the extension to unlock Premium.",
+    "q3": "Where is my data stored?",
+    "a3": "We store your email and license in Vercel KV. No card data touches our servers.",
+    "q4": "Refund policy?",
+    "a4": "Digital licenses are generally non-refundable. If you paid by mistake and didn’t activate the key, contact support."
+  },
+  "pricing": {
+    "title": "Premium plan",
+    "email": "Email address",
+    "agree": "I agree with Terms and Privacy",
+    "pay": "Pay with Payeer",
+    "errors": {
+      "email": "Enter a valid email",
+      "agree": "You must agree to continue"
+    }
+  },
+  "success": {
+    "title": "Payment successful",
+    "desc": "Your license key has been sent to your email.",
+    "home": "Home",
+    "dashboard": "Dashboard"
+  },
+  "fail": {
+    "title": "Payment failed",
+    "desc": "Please check your card/balance and try again.",
+    "retry": "Try again",
+    "home": "Home"
+  },
+  "dashboard": {
+    "title": "License dashboard",
+    "token": "License key",
+    "check": "Check",
+    "ok": "License valid",
+    "invalid": "Invalid key",
+    "expired": "License expired",
+    "history": "History of purchases (coming soon)"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service & Refunds"
+  }
+}
