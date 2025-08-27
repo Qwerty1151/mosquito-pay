@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === NAVILON TOKENS (из вашего проекта) === */
-:root {
-  --font-size: 14px;
-  --background: #0a0f1c;
-  --foreground: #ffffff;
-  --card: #0f1729;
-  --card-foreground: #ffffff;
-  --primary: #00d4ff;
-  --primary-foreground: #0a0f1c;
-  --secondary: #1a2332;
-  --secondary-foreground: #ffffff;
-  --muted: #1a2332;
-  --muted-foreground: #94a3b8;
-  --border: rgba(255,255,255,0.10);
-  --input: rgba(255,255,255,0.10);
-  --ring: #00d4ff;
-  --radius: 0.625rem;
-}
-html { font-size: var(--font-size); }
-body { @apply bg-background text-foreground antialiased; }
-::selection { background: var(--primary); color: var(--primary-foreground); }
-:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); border-radius: 8px; }
+/* === NAVILON TOKENS (RGB) === */
+:root{
+  --font-size:14px;
 
-/* Утилиты UI */
-@layer utilities {
-  .btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
-  .btn-primary { @apply btn bg-primary text-[var(--primary-foreground)] hover:opacity-90 shadow-soft; }
-  .btn-ghost { @apply btn bg-transparent border border-border hover:bg-secondary/30; }
-  .btn-outline { @apply btn bg-transparent border border-border text-foreground hover:bg-secondary/30; }
-  .card { @apply rounded-2xl border border-border bg-card shadow-card; }
-  .badge { @apply inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm; }
-  .input { @apply w-full rounded-xl border border-border bg-transparent px-3 py-2 outline-none focus:border-primary placeholder:text-[var(--muted-foreground)]; }
-  .label { @apply mb-1 block text-sm text-[var(--muted-foreground)]; }
+  /* базовые rgb (пробелы, без запятых) */
+  --background-rgb: 10 15 28;      /* #0a0f1c */
+  --foreground-rgb: 255 255 255;
+  --card-rgb:        15 23 41;      /* #0f1729 */
+  --card-foreground-rgb: 255 255 255;
+  --primary-rgb:      0 212 255;    /* #00d4ff */
+  --primary-foreground-rgb: 10 15 28;
+  --secondary-rgb:   26 35 50;      /* #1a2332 */
+  --secondary-foreground-rgb: 255 255 255;
+  --muted-rgb:       26 35 50;
+  --muted-foreground-rgb: 148 163 184; /* #94a3b8 */
+  --border-rgb:     255 255 255;    /* /10 будем ставить в классах */
+  --input-rgb:      255 255 255;
+  --ring-rgb:         0 212 255;
+
+  /* хелперы в формате rgb(var()) — удобно вне Tailwind-классов */
+  --background: rgb(var(--background-rgb));
+  --foreground: rgb(var(--foreground-rgb));
+  --card: rgb(var(--card-rgb));
+  --primary: rgb(var(--primary-rgb));
+  --secondary: rgb(var(--secondary-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --border: rgba(255,255,255,.10);
+  --input: rgba(255,255,255,.10);
+
+  --radius: .625rem;
 }
-h1 { @apply text-4xl md:text-5xl font-extrabold tracking-tight; }
-h2 { @apply text-3xl font-bold; }
-h3 { @apply text-2xl font-semibold; }
-p { @apply text-slate-300; }
+
+html{ font-size:var(--font-size); }
+body{ @apply bg-background text-foreground antialiased; }
+::selection{ background: var(--primary); color: var(--primary-foreground); }
+:focus-visible{ outline:none; box-shadow:0 0 0 3px rgb(var(--ring-rgb)); border-radius:8px; }
+
+@layer utilities{
+  .btn{ @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary{ @apply btn bg-primary text-[rgb(var(--primary-foreground-rgb))] hover:opacity-90 shadow-soft; }
+  /* <alpha> теперь работает: */
+  .btn-ghost{ @apply btn bg-transparent border border-border/30 hover:bg-secondary/30; }
+  .btn-outline{ @apply btn bg-transparent border border-border/60 text-foreground hover:bg-secondary/20; }
+  .card{ @apply rounded-2xl border border-border/10 bg-card shadow-card; }
+  .badge{ @apply inline-flex items-center gap-2 rounded-full border border-border/20 px-3 py-1 text-sm; }
+  .input{ @apply w-full rounded-xl border border-border/20 bg-transparent px-3 py-2 outline-none focus:border-primary placeholder:text-[rgb(var(--muted-foreground-rgb))]; }
+  .label{ @apply mb-1 block text-sm text-[rgb(var(--muted-foreground-rgb))]; }
+}
+
+h1{ @apply text-4xl md:text-5xl font-extrabold tracking-tight; }
+h2{ @apply text-3xl font-bold; }
+h3{ @apply text-2xl font-semibold; }
+p{ @apply text-slate-300; }
