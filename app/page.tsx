@@ -6,10 +6,10 @@ import CTA from "@/components/sections/CTA";
 import Compare from "@/components/sections/Compare";
 import Testimonials from "@/components/sections/Testimonials";
 import { cookies, headers } from "next/headers";
-import en from "@/messages/en.json";
-import ru from "@/messages/ru.json";
-import pl from "@/messages/pl.json";
-import fr from "@/messages/fr.json";
+import en from "@msgs/en.json";
+import ru from "@msgs/ru.json";
+import pl from "@msgs/pl.json";
+import fr from "@msgs/fr.json";
 
 function getLocale() {
   const c = cookies().get("lang")?.value;
