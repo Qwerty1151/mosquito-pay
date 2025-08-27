@@ -1,19 +1,34 @@
-import type { Config } from "tailwindcss";
-const config: Config = {
-  content: ["./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./messages/**/*.json"],
   theme: {
-    container: { center: true, padding: "1rem", screens: { "2xl": "1280px" } },
     extend: {
       colors: {
-        primary:"#2563EB", secondary:"#0EA5E9", accent:"#22C55E", muted:"#64748B",
-        deep:"#0A1B2E", foreground:"#0F172A", background:"#FFFFFF", border:"#E2E8F0",
-        warning:"#F59E0B", danger:"#EF4444", success:"#10B981"
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
+        border: "var(--border)",
+        input: "var(--input)",
+        primary: "var(--primary)",
+        "primary-foreground": "var(--primary-foreground)",
+        secondary: "var(--secondary)",
+        "secondary-foreground": "var(--secondary-foreground)",
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
+        ring: "var(--ring)"
       },
-      fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","-apple-system","Segoe UI","Roboto","Noto Sans","Ubuntu","Cantarell","Helvetica Neue","Arial","sans-serif"] },
-      borderRadius: { xl:"1rem","2xl":"1.25rem","3xl":"1.5rem" },
-      boxShadow: { card:"0 10px 25px rgba(0,0,0,0.08)", soft:"0 2px 8px rgba(0,0,0,0.06)" }
+      borderRadius: {
+        xl: "var(--radius)",
+        "2xl": "calc(var(--radius) + 0.375rem)",
+        "3xl": "calc(var(--radius) + 0.75rem)"
+      },
+      boxShadow: {
+        soft: "0 8px 24px rgba(0,0,0,0.12)",
+        card: "0 4px 14px rgba(0,0,0,0.10)"
+      },
+      container: { center: true, padding: { DEFAULT: "1rem", md: "2rem" } }
     }
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: []
 };
-export default config;

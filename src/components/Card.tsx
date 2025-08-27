@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
-export function Card({ className, children }: { className?: string; children: React.ReactNode}) {
-  return <div className={cn("card p-6", className)}>{children}</div>;
+import { HTMLAttributes } from "react";
+export function Card({ className = "", ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={`card p-5 ${className}`} {...props} />;
 }

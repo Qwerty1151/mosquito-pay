@@ -1,24 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* { -webkit-tap-highlight-color: transparent; }
-:root { color-scheme: light; }
-html:focus-within { scroll-behavior: smooth; }
-html, body { height: 100%; }
-body { @apply bg-background text-foreground antialiased; }
-::selection { @apply bg-primary text-white; }
-:focus-visible { @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background; }
-.prose { @apply prose-slate; }
-@layer utilities {
-  .btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
-  .btn-primary { @apply btn bg-primary text-white hover:opacity-90 shadow-soft; }
-  .btn-ghost { @apply btn bg-transparent hover:bg-slate-100; }
-  .btn-outline { @apply btn border border-border hover:bg-slate-50; }
-  .card { @apply rounded-2xl border border-border bg-white shadow-card; }
-  .badge { @apply inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm; }
-  .input { @apply w-full rounded-xl border border-border bg-white px-3 py-2 outline-none focus:border-primary; }
-  .label { @apply mb-1 block text-sm text-slate-600; }
-  .bg-deep-blue { @apply bg-deep; }
-  .text-deep-blue { @apply text-deep; }
-  .border-deep-blue { @apply border-deep; }
+
+/* === NAVILON TOKENS (из вашего проекта) === */
+:root {
+  --font-size: 14px;
+  --background: #0a0f1c;
+  --foreground: #ffffff;
+  --card: #0f1729;
+  --card-foreground: #ffffff;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0f1c;
+  --secondary: #1a2332;
+  --secondary-foreground: #ffffff;
+  --muted: #1a2332;
+  --muted-foreground: #94a3b8;
+  --border: rgba(255,255,255,0.10);
+  --input: rgba(255,255,255,0.10);
+  --ring: #00d4ff;
+  --radius: 0.625rem;
 }
+html { font-size: var(--font-size); }
+body { @apply bg-background text-foreground antialiased; }
+::selection { background: var(--primary); color: var(--primary-foreground); }
+:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); border-radius: 8px; }
+
+/* Утилиты UI */
+@layer utilities {
+  .btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-primary text-[var(--primary-foreground)] hover:opacity-90 shadow-soft; }
+  .btn-ghost { @apply btn bg-transparent border border-border hover:bg-secondary/30; }
+  .btn-outline { @apply btn bg-transparent border border-border text-foreground hover:bg-secondary/30; }
+  .card { @apply rounded-2xl border border-border bg-card shadow-card; }
+  .badge { @apply inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-sm; }
+  .input { @apply w-full rounded-xl border border-border bg-transparent px-3 py-2 outline-none focus:border-primary placeholder:text-[var(--muted-foreground)]; }
+  .label { @apply mb-1 block text-sm text-[var(--muted-foreground)]; }
+}
+h1 { @apply text-4xl md:text-5xl font-extrabold tracking-tight; }
+h2 { @apply text-3xl font-bold; }
+h3 { @apply text-2xl font-semibold; }
+p { @apply text-slate-300; }

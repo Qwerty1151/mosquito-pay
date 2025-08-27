@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
-import "./../src/styles/globals.css";
+import "@/styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { detectLocale, getMessages } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://mosquito.navilon.tech"),
-  title: { default: "Ultrasonic Mosquito Repellent — Premium", template: "%s — Ultrasonic Mosquito Repellent" },
-  description: "Freemium + Premium: pay with Payeer and activate your license key for the Ultrasonic Mosquito Repellent browser extension.",
-  openGraph: { title: "Ultrasonic Mosquito Repellent — Premium", description: "Pay with Payeer. Instant license activation for Premium.", url: "/", siteName: "Navilon Tech", type: "website" },
-  twitter: { card: "summary_large_image", title: "Ultrasonic Mosquito Repellent — Premium", description: "Freemium + Premium with Payeer checkout." },
-  alternates: { canonical: "/" }
+  title: { default: "Ultrasonic Mosquito Repellent — Premium", template: "%s — Mosquito Repellent" },
+  description: "Freemium + Premium via Payeer. Instant license email.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = detectLocale();
+  const t = await getMessages(locale);
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale}>
       <body className="min-h-screen flex flex-col">
-        <Header />
+        <Header locale={locale} labels={t.nav} cta={t.hero.ctaBuy} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer labels={{privacy:t.nav.privacy, terms:t.nav.terms}}/>
       </body>
     </html>
   );
