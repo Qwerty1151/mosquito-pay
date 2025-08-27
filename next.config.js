@@ -2,7 +2,6 @@ const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: { optimizeCss: true },
   webpack: (config) => {
     // SVG как React-компоненты
     config.module.rules.push({
@@ -10,7 +9,7 @@ const nextConfig = {
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
     });
-    // Алиасы проекта
+    // Алиасы
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     config.resolve.alias['@msgs'] = path.resolve(__dirname, 'messages');
     return config;
