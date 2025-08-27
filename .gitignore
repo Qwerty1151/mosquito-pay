@@ -7,3 +7,8 @@ node_modules
 .env*
 .vercel
 NUL
+node_modules
+.next
+.env*
+.vercel
+NUL
