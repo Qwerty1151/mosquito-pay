@@ -1,23 +1,12 @@
 const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  poweredByHeader: false,
-  images: {
-    formats: ['image/avif','image/webp'],
-    remotePatterns: [{ protocol: 'https', hostname: '**' }]
-  },
-  async headers() {
-    return [{
-      source: "/(.*)",
-      headers: [
-        { key: "X-Content-Type-Options", value: "nosniff" },
-        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" }
-      ]
-    }];
-  },
+  experimental: { optimizeCss: true },
   webpack: (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    config.resolve.alias['@msgs'] = path.resolve(__dirname, 'messages');
     return config;
-  }
+  },
 };
 module.exports = nextConfig;
