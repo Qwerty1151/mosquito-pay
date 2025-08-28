@@ -1,14 +1,11 @@
+const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizeCss: false
-  },
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'cdn.navilon.tech' }
-    ]
-  },
-  reactStrictMode: true
+  experimental: { optimizeCss: true },
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    config.resolve.alias['@msgs'] = path.resolve(__dirname, 'messages');
+    return config;
+  }
 };
 module.exports = nextConfig;
