@@ -2,18 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Жёсткие цвета, чтобы контент был виден даже если токены не подхватятся */
 :root {
-  --background: #0b1220;   /* темный фон */
-  --foreground: #e6f0ff;   /* светлый текст */
-  --border: rgba(255,255,255,.12);
+  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 20, 20, 20;
+  --primary-rgb: 34, 197, 94;   /* emerald-500 */
+  --secondary-rgb: 59, 130, 246;/* blue-500 */
+  --muted-rgb: 243, 244, 246;   /* gray-100 */
+  --muted-foreground-rgb: 107, 114, 128; /* gray-500 */
 }
+
 html, body {
-  background: var(--background);
-  color: var(--foreground);
+  height: 100%;
 }
-.container { @apply mx-auto max-w-6xl px-4; }
-.btn { @apply inline-flex items-center justify-center rounded-xl px-5 py-2.5 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed; }
-.btn-primary { @apply btn bg-[rgb(0,170,252)] text-black hover:opacity-90 shadow; }
-.btn-ghost   { @apply btn bg-transparent border border-[var(--border)] hover:bg-white/10; }
-.card        { @apply rounded-2xl border border-[var(--border)] bg-white/5 shadow; }
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Контейнер */
+.container {
+  @apply max-w-[1200px] mx-auto px-4;
+}
+
+/* Кнопка */
+.btn {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-xl font-medium
+         bg-primary text-white transition hover:bg-primary/90 active:scale-[.99];
+}
+
+/* Хелперы */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold tracking-tight;
+}
+.section-subtitle {
+  @apply text-base md:text-lg text-[rgb(var(--muted-foreground-rgb))];
+}
