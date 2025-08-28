@@ -1,4 +1,3 @@
-"use client";
 import Section from "../Section";
 import { WEBSTORE_URL } from "@/lib/const";
 import Link from "next/link";
